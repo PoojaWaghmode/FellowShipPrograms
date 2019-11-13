@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Basic_Programs": {
+      "commandName": "Project",
+      "commandLineArgs": "5",
+      "environmentVariables": {
+        "Key": "Value",
+        "power": "5"
+      },
+      "nativeDebugging": true
+    }
+  }
+}
