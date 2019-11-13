@@ -22,11 +22,13 @@ namespace DataStructurePrograms
                     switch (ch)
                     {
                         case 1:
+                            LinkedListUtility.head = null;
                             UnorderedList unorderlist = new UnorderedList();
                             unorderlist.ReadSplitSerachWords();
                             break;
 
                         case 2:
+                            OrderedUtility.orderhead = null;
                             OrderedList orderlist = new OrderedList();
                             orderlist.OrderListSearch();
                             break;

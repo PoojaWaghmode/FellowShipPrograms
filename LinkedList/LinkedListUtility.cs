@@ -338,7 +338,7 @@ namespace DataStructurePrograms.LinkedList
             Node tempNode = head;
             while (tempNode != null)
             {
-                Console.WriteLine(tempNode.data + " ");
+                Console.Write(tempNode.data + "=>");
                 tempNode = tempNode.next;
             }
         }

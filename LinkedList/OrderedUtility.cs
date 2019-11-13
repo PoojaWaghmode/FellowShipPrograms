@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructurePrograms.LinkedList
 {
-    class OrderedUtility
+    public class OrderedUtility
     {
         public static OrderedNode orderhead;
         public static OrderedNode AddOrder(int data)
@@ -262,6 +262,28 @@ namespace DataStructurePrograms.LinkedList
                      current.next;
                  }
              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
              return item;
          }*/
 

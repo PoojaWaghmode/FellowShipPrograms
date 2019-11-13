@@ -55,13 +55,9 @@ namespace DataStructurePrograms.LinkedList
                 OrderedUtility.AddOrder(itemsearch);
                 Console.WriteLine("Numbers In Ascending Order:");
                
-                //using (StreamWriter stream = new StreamWriter("C:\\Users\\User\\Desktop\\NumberList.txt", true))
-                //{
-                //    stream.Write(" " + itemsearch);
-                //}
             }
             OrderedUtility.Display();
-            Console.Write("\nList Data Added Successfully.....\n");
+           
 
         }
 
