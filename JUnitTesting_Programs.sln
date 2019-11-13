@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JUnitTesting_Programs", "JUnitTesting_Programs.csproj", "{43165C01-B413-44CA-A3DE-2DC1A2695BAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43165C01-B413-44CA-A3DE-2DC1A2695BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43165C01-B413-44CA-A3DE-2DC1A2695BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43165C01-B413-44CA-A3DE-2DC1A2695BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43165C01-B413-44CA-A3DE-2DC1A2695BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5487FD69-5790-417F-9C22-8F6365651739}
+	EndGlobalSection
+EndGlobal
