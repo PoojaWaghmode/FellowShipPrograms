@@ -1,0 +1,17 @@
+[
+  {
+    "NameOfShare": "IBM",
+    "NumberOfShare": 8,
+    "SharePrice": 90.0
+  },
+  {
+    "NameOfShare": "Tata",
+    "NumberOfShare": 70,
+    "SharePrice": 3000.0
+  },
+  {
+    "NameOfShare": "Infocys",
+    "NumberOfShare": 70,
+    "SharePrice": 30000.0
+  }
+]

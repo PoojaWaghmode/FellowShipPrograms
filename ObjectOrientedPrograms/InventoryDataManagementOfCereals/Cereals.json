@@ -1,0 +1,38 @@
+{
+  "Rice": [
+    {
+      "riceName": "Aeroplane",
+      "ricePrice": 100,
+      "riceWeight": 5
+    },
+    {
+      "riceName": "Basmati",
+      "ricePrice": 60,
+      "riceWeight": 2
+    }
+  ],
+  "Wheat": [
+    {
+      "wheatName": "Lokvan",
+      "wheatPrice": 609,
+      "weightWeight": 50
+    },
+    {
+      "wheatName": "Maharaja",
+      "wheatPrice": 100,
+      "weightWeight": 5
+    }
+  ],
+  "Pulse": [
+    {
+      "pulseName": "Masoor",
+      "pulsePrice": 100,
+      "pulsetWeight": 5
+    },
+    {
+      "pulseName": "Moong",
+      "pulsePrice": 100,
+      "pulseWeight": 5
+    }
+  ]
+}
