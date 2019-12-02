@@ -13,22 +13,36 @@ namespace CommonLayer.Model
         private int age;
         private string address;
         private string email;
+
         [Required(ErrorMessage="Employee Id Required")]
         public int EmployeeId { get => employeeId; set => employeeId = value; }
 
-        [Required(ErrorMessage="FirstName Required")]
+       
+        [Required(ErrorMessage = "Employee FirstName Is Required")]
+        [StringLength(100, MinimumLength = 3,
+        ErrorMessage = "FirstName Should be minimum 3 characters and a maximum of 25 characters")]
         public string FirstName { get => firstName; set => firstName = value; }
 
-        [Required(ErrorMessage="LastName Required")]
+
+        [Required(ErrorMessage = "Employee LastName Is Required")]
+        [StringLength(100, MinimumLength = 3,
+        ErrorMessage = "Employee LastName Should be minimum 3 characters and a maximum of 25 characters")]
+        [DataType(DataType.Text)]
         public string LastName { get => lastName; set => lastName = value; }
 
-        [Required(ErrorMessage = "Age Required")]
+
+        [Range(18, 99, ErrorMessage = "Age should be between 18 and 99")]
         public int Age { get => age; set => age = value; }
+
+
 
         [Required(ErrorMessage = "Address Required")]
         public string Address { get => address; set => address = value; }
 
-        [Required(ErrorMessage = "Email Required")]
+
+
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string Email { get => email; set => email = value; }
     }
 }

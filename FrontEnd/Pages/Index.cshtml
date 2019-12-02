@@ -4,7 +4,23 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<Html>
+    <head>
+        <title>Employee Registration Page </title>     
+        <link rel="stylesheet" href="/css/EmployeeStyleSheet.css">
+        <link rel="js"href="/js/HomeController.js">
+    </head>
+    <body>
+        <h1 style="text-align: center"> REGISTRATION FORM </h1>
+        <form name="RegForm" action="/registrationpage/post" onsubmit="return RegistrationForm()" method="post">
+
+            <p>FirstName:  <input type="text" size=60 name="First Name"></p><br>
+            <p>LastName:   <input type="text" size="60 name="Last Name"></p><br>
+            <p>Age:        <input type="number" size="60" name="Age"></p><br>
+            <p>Address      <input type="text" size="60" name="Address"</p><br>
+            <p>Email    <input type="text" size="60" name="Email"></p><br>
+            <input type="submit" value="send" name="Submit">
+            <input type="reset" value="Reset" name="Reset">
+    </form>
+    </body>
+</Html>
