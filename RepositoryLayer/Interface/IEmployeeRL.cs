@@ -7,10 +7,11 @@ namespace RepositoryLayer.Interface
 {
     public interface IEmployeeRL
     {
-        bool AddEmployee(EmployeeModel employeeModel);
+        string AddEmployee(EmployeeModel employeeModel);
         bool DeleteEmployee(int employeeId);
         bool UpdateEmployee(EmployeeModel employeeModel, int employeeId);
         IList<EmployeeModel> DisplayEmployee();
+        IList<EmployeeModel> SearchEmployeeById(int employeeId);
     }
 
 

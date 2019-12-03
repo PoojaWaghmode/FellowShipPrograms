@@ -63,5 +63,7 @@
     <Build Include="StoredProcedure\DisplayAllEmployees.sql" />
     <Build Include="StoredProcedure\DeleteEmployeeById.sql" />
     <Build Include="StoredProcedure\UpdateEmployeeById.sql" />
+    <Build Include="StoredProcedure\SearchEmployeeById.sql" />
+    <Build Include="Employee.sql" />
   </ItemGroup>
 </Project>

@@ -11,7 +11,7 @@ namespace RepositoryLayer.Service
     public class EmployeeRL : IEmployeeRL
     {
         SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDb)\LocalDB;Initial Catalog=EmployeeDb;Integrated Security=true;");
-        public bool AddEmployee(EmployeeModel employeeModel)
+        public string AddEmployee(EmployeeModel employeeModel)
         {
             try 
             {
@@ -29,9 +29,9 @@ namespace RepositoryLayer.Service
             }
             catch(Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                throw new Exception(exception.Message);
             }
-            return  true;
+            return  "Record Added Successfully";
         }
 
         public bool DeleteEmployee(int employeeId)
@@ -48,13 +48,11 @@ namespace RepositoryLayer.Service
             }
             catch(Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                throw new Exception(exception.Message);
             }
             return true;
         }
-
-
-        public bool UpdateEmployee(EmployeeModel employeeModel, int employeeId)
+       public bool UpdateEmployee(EmployeeModel employeeModel, int employeeId)
         {
            try
             {
@@ -73,7 +71,7 @@ namespace RepositoryLayer.Service
             }
             catch(Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                throw new Exception(exception.Message);
             }
             return true;
         }
@@ -81,12 +79,11 @@ namespace RepositoryLayer.Service
 
         public IList<EmployeeModel> DisplayEmployee()
         {
-            sqlConnection.Open();
-            IList<EmployeeModel> employeeList = new List<EmployeeModel>();
 
             try
             {
-                
+                sqlConnection.Open();
+                IList<EmployeeModel> employeeList = new List<EmployeeModel>();
                 SqlCommand sqlCommand = new SqlCommand("DisplayAllEmployees",sqlConnection);
                 SqlDataReader dataReader = sqlCommand.ExecuteReader();
                 while(dataReader.Read())
@@ -112,6 +109,38 @@ namespace RepositoryLayer.Service
             }
             
         }
-        
+        public IList<EmployeeModel> SearchEmployeeById(int employeeId)
+        {
+            try
+            {
+                IList<EmployeeModel> employeeList = new List<EmployeeModel>();
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("SearchEmployeeById", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@EmployeeId", employeeId);
+                SqlDataReader dataReader = sqlCommand.ExecuteReader();
+                while (dataReader.Read())
+                {
+
+                    employeeList.Add(new EmployeeModel
+                    {
+                        EmployeeId = Convert.ToInt32(dataReader["EmployeeId"]),
+                        FirstName = dataReader["FirstName"].ToString(),
+                        LastName = dataReader["LastName"].ToString(),
+                        Age = Convert.ToInt32(dataReader["Age"]),
+                        Address = dataReader["Address"].ToString(),
+                        Email = dataReader["Email"].ToString()
+
+                    });
+
+                }
+                return employeeList;
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message);
+            }
+
+
+        }
     }
 }

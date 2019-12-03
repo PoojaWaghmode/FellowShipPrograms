@@ -24,7 +24,7 @@ namespace EmployeeAPI.Controllers
         [Route("add")]
         public IActionResult Add(EmployeeModel employeeModel)
         {
-            var result =_employee.AddEmployee(employeeModel);
+            var result = _employee.AddEmployee(employeeModel);
             return Ok(new { result });
         }
 
@@ -33,21 +33,28 @@ namespace EmployeeAPI.Controllers
         public IActionResult Delete(int employeeId)
         {
             var result = _employee.DeleteEmployee(employeeId);
-            return Ok(new { result});
+            return Ok(new { result });
         }
 
         [HttpPut]
         [Route("update/{employeeId}")]
-        public IActionResult Update(EmployeeModel employeeModel,int employeeId)
+        public IActionResult Update(EmployeeModel employeeModel, int employeeId)
         {
             var result = _employee.UpdateEmployee(employeeModel, employeeId);
-                return Ok(new {result });
+            return Ok(new { result });
         }
         [HttpGet]
         [Route("get")]
         public IActionResult Display()
         {
             var result = _employee.DisplayEmployee();
+            return Ok(new { result });
+        }
+        [HttpGet]
+        [Route("searchId/{employeeId}")]
+        public IActionResult SearchById(int employeeId)
+        {
+            var result = _employee.SerachEmployeeById(employeeId);
             return Ok(new { result });
         }
     }

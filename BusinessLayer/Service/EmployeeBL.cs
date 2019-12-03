@@ -14,7 +14,7 @@ namespace BusinessLayer.Service
         {
             _employeeRL = employeeRL;
         }
-        public bool AddEmployee(EmployeeModel employeeModel)
+        public string AddEmployee(EmployeeModel employeeModel)
         {
             return _employeeRL.AddEmployee(employeeModel);
         }
@@ -32,7 +32,9 @@ namespace BusinessLayer.Service
         {
             return _employeeRL.DisplayEmployee();
         }
-
-
+        public IList<EmployeeModel> SerachEmployeeById(int employeeId)
+        {
+            return _employeeRL.SearchEmployeeById(employeeId);
+        }
     }
 }
