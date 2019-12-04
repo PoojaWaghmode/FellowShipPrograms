@@ -31,8 +31,8 @@ namespace CommonLayer.Model
         public string LastName { get => lastName; set => lastName = value; }
 
 
-        [Range(18, 99, ErrorMessage = "Age should be between 18 and 99")]
-        public int Age { get => age; set => age = value; }
+       // //[Range(18, 99, ErrorMessage = "Age should be between 18 and 99")]
+       // public int Age { get => age; set => age = value; }
 
 
 

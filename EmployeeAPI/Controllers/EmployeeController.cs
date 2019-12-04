@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using BusinessLayer.Interface;
 using CommonLayer.Model;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RepositoryLayer.Interface;
-
 namespace EmployeeAPI.Controllers
 {
     [Route("api/[controller]")]
@@ -44,7 +38,7 @@ namespace EmployeeAPI.Controllers
             return Ok(new { result });
         }
         [HttpGet]
-        [Route("get")]
+        [Route("getAllEmployee")]
         public IActionResult Display()
         {
             var result = _employee.DisplayEmployee();

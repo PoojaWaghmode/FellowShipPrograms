@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>9dff50c3-d8a6-4a7b-a7ee-d3ed7375ef4e</UserSecretsId>
   </PropertyGroup>
 
-
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
   </ItemGroup>
 
 </Project>

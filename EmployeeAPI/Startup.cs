@@ -32,6 +32,17 @@ namespace EmployeeAPI
             services.AddTransient<IEmployeeBL, EmployeeBL>();
             services.AddTransient<IEmployeeRL, EmployeeRL>();
 
+
+            //// Add service and create Policy with options
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
+
+
             services.AddControllers();
         }
 
@@ -44,7 +55,7 @@ namespace EmployeeAPI
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors("CorsPolicy");
             app.UseRouting();
 
             app.UseAuthorization();
