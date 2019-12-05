@@ -19,7 +19,6 @@ namespace EmployeeOperationsTestCases
             {
                 FirstName = "firstName",
                 LastName="lastName",
-                Age = 21,
                 Address="address",
                 Email="email@gmail.com"
             };
@@ -36,7 +35,7 @@ namespace EmployeeOperationsTestCases
             var model = new EmployeeModel();
             
             var data = business.DeleteEmployee(2);
-            Assert.NotNull(data);
+            Assert.True(data);
         }
 
         [Fact]
@@ -49,7 +48,6 @@ namespace EmployeeOperationsTestCases
                 EmployeeId= 1002,
                 FirstName = "firstName",
                 LastName  = "lastName",
-                Age       =  21,
                 Address   = "address",
                 Email     = "email@gmail.com"
             };
@@ -67,7 +65,6 @@ namespace EmployeeOperationsTestCases
             {
                 FirstName = "firstName",
                 LastName = "lastName",
-                Age = 21,
                 Address = "address",
                 Email = "email@gmail.com"
             };

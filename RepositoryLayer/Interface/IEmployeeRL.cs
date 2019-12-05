@@ -33,7 +33,7 @@ namespace RepositoryLayer.Interface
         /// <param name="employeeModel">The employee model.</param>
         /// <param name="employeeId">The employee identifier.</param>
         /// <returns></returns>
-        bool UpdateEmployee(EmployeeModel employeeModel, int employeeId);
+        bool UpdateEmployee(EmployeeModel employeeModel);
 
         /// <summary>
         /// Displays the employee.
